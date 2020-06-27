@@ -1,0 +1,36 @@
+﻿@model Student
+<h2 class="text-center">Wypełnij pola aby utworzyć nowego studenta</h2>
+<div class="input-field">
+    <div class="row ">
+        <form class="col s12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="input-field col s12">
+                <input asp-for="FirstName" />
+                <label asp-for="FirstName">Imie</label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="input-field col s12">
+                <input asp-for="LastName" />
+                <label asp-for="LastName">Nazwisko</label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+           
+            <select name="studies" class="browser-default">
+                <option value="" disabled selected>Wybierz kierunek</option>
+                <option value="Informatyka">Informatyka</option>
+                <option value="Sztuka nowych mediów">Sztuka nowych mediów</option>
+                <option value="Zarządanie">Zarządanie</option>
+            </select>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+                Dodaj
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+       
+    
+</div>
+
+
+
